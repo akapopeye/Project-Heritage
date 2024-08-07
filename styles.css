@@ -1,0 +1,203 @@
+@font-face {
+    font-family: 'GorillaTagFont';
+    src: url('fonts/GorillaTagFont.ttf') format('truetype');
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'GorillaTagFont', sans-serif;
+    overflow: hidden;
+}
+
+body {
+    background: linear-gradient(135deg, #1c1c1c, #444);
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: #000;
+    color: #fff;
+    padding: 20px;
+    border-bottom: 3px solid #28a745;
+}
+
+footer {
+    background: #000;
+    color: #fff;
+    padding: 20px;
+    border-top: 3px solid #28a745;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #28a745;
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+.button-container {
+    margin: 20px 0;
+}
+
+.button {
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2em;
+    margin: 10px;
+    cursor: url('cursors/bottom.png'), pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+.section {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.section p {
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.animation-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0000ff, #800080, #000000);
+    background-size: 300% 300%;
+    animation: fadeBackground 15s ease infinite;
+    z-index: -1;
+}
+
+@keyframes fadeBackground {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+.ghost {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-image: url('images/ghost.png');
+    background-size: cover;
+    pointer-events: none;
+    transition: transform 0.2s ease-out;
+}
+
+.alert-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: none;
+}
+
+.alert-box p {
+    margin: 0;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.alert-box button {
+    margin-top: 10px;
+    background-color: #dc3545;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.alert-box button:hover {
+    background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
