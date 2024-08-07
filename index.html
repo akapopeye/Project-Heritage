@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Project Heritage - Download the latest version of our app and join our Discord community.">
+    <meta name="keywords" content="Project Heritage, Download APK, Discord, Community">
+    <meta name="author" content="Project Heritage Team">
+    <title>PROJECT HERITAGE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="animation-background"></div>
+    <header>
+        <div class="container">
+            <h1>PROJECT HERITAGE</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="section">
+                <h2>Download Project Heritage</h2>
+                <p id="status-message">The game is in development.</p>
+                <div class="button-container">
+                    <a id="download-button" href="#" class="button">DOWNLOAD APK</a>
+                </div>
+            </section>
+            <section class="section">
+                <h2>JOIN OUR DISCORD SERVER</h2>
+                <p>Stay connected with our community and get the latest updates.</p>
+                <div class="button-container">
+                    <a href="#" onclick="window.open('https://discord.gg/Z4yqAwaM3M', '_blank'); return false;" class="button">JOIN DISCORD</a>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>2024 PROJECT HERITAGE TEAM. ALL RIGHTS RESERVED.</p>
+        <p>THIS SITE IS LICENSED UNDER THE <a href="LICENSE" target="_blank">MIT LICENSE</a>.</p>
+    </footer>
+    <div id="alert-box" class="alert-box">
+        <p>The game is in development.</p>
+        <button id="close-alert" class="button">Close</button>
+    </div>
+    <script>
+        const gameInDevelopment = true;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const statusMessage = document.getElementById('status-message');
+            const downloadButton = document.getElementById('download-button');
+            const alertBox = document.getElementById('alert-box');
+            const closeAlertButton = document.getElementById('close-alert');
+
+            if (gameInDevelopment) {
+                statusMessage.textContent = "The game is in development.";
+                downloadButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    alertBox.style.display = 'block';
+                });
+            } else {
+                statusMessage.textContent = "Get the latest version of our app by clicking the button below.";
+                downloadButton.href = 'https://download1526.mediafire.com/lkh24jteavgg5Bj6pe6PmEhmhpljJbMe3gJE0FADrhG6Cz9lyAV99nR07BM8YEsweejgcH-ZgjYv8a36VAllCpLQEp6TY7sCrmDoFWkJrwziCfyM2bh5nDFyGdB2GpYyqBDswDohzMvor_ZNNFKCmaeBFuPGohKBCzR7Sb3hhQ/9b52lhwym392jwc/Project+Heritage.apk';
+                
+            }
+
+            closeAlertButton.addEventListener('click', () => {
+                alertBox.style.display = 'none';
+            });
+
+            const ghost = document.createElement('img');
+            ghost.src = 'images/ghost.png';
+            ghost.className = 'ghost';
+            document.body.appendChild(ghost);
+
+            const moveGhost = () => {
+                const { innerWidth: width, innerHeight: height } = window;
+                const x = Math.random() * (width - 100);
+                const y = Math.random() * (height - 100);
+                ghost.style.left = `${x}px`;
+                ghost.style.top = `${y}px`;
+            };
+
+            const handleMouseMove = (e) => {
+                const rect = ghost.getBoundingClientRect();
+                const distance = Math.hypot(e.clientX - (rect.left + rect.width / 2), e.clientY - (rect.top + rect.height / 2));
+                if (distance < 150) moveGhost();
+            };
+
+            moveGhost();
+            setInterval(moveGhost, 3000);
+            document.addEventListener('mousemove', handleMouseMove);
+
+            document.addEventListener('contextmenu', e => e.preventDefault());
+            document.addEventListener('selectstart', e => e.preventDefault());
+        });
+    </script>
+</body>
+</html>
