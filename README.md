@@ -1,7 +1,5 @@
 # Project Heritage
 
-**Project Heritage** is a Gorilla Tag copie, designed to provide an immersive and interactive experience in a 3D environment. This game uses arm movements for navigation, interaction, and game customization.
-
 ## Table of Contents
 
 - [Description](#description)
@@ -14,15 +12,13 @@
 
 ## Description
 
-Project Heritage is a *tag* game where players use natural gestures to move and interact. Inspired by Gorilla Tag, this project offers engaging gameplay mechanics and customization features for a unique experience.
+Project Heritage is a Gorilla Tag copie created by Popeye. In this game, you can access a free mod menu, and you also have the option to purchase a premium mod menu for $5.
 
 ## Features
 
-- **Gesture-based Movement:** Move by using your arms to run and jump.
-- **Menu Customization:** Modify colors, names, and access various settings through an intuitive menu.
-- **Day/Night System:** The game automatically alternates between day and night every 30 minutes for enhanced immersion.
-- **Online Multiplayer:** Join game rooms and interact with other players in varied environments.
-- **3D User Interface:** Navigate through different options with 3D panels and buttons.
+- **Punch Mod:** Engage in combat where you can punch other players and get punched in return.
+- **Player IDs:** View each player's name, ID, and status in the game (Member, Booster, Moderator, Admin, Owner).
+- **Mod Menu:** The game includes a free mod menu with basic features and an advanced mod menu available for $5, which provides additional features.
 
 ## License
 
