@@ -8,6 +8,19 @@
     <meta name="author" content="Project Heritage Team">
     <title>PROJECT HERITAGE</title>
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="PROJECT HERITAGE">
+    <meta property="og:description" content="Download the latest version of Project Heritage and join our vibrant Discord community for updates and support.">
+    <meta property="og:image" content="https://github.com/akapopeye/Project-Heritage/edit/main/images/PROJECT.png"> <!-- Replace with your GitHub image URL -->
+    <meta property="og:url" content="https://akapopeye.github.io/Project-Heritage/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PROJECT HERITAGE">
+    <meta name="twitter:description" content="Download the latest version of Project Heritage and join our vibrant Discord community for updates and support.">
+    <meta name="twitter:image" content="https://github.com/akapopeye/Project-Heritage/edit/main/images/PROJECT.png"> 
 </head>
 <body>
     <div class="animation-background"></div>
@@ -43,7 +56,7 @@
         <button id="close-alert" class="button">Close</button>
     </div>
     <script>
-        const gameInDevelopment = true;
+        const gameInDevelopment = false;
 
         document.addEventListener('DOMContentLoaded', () => {
             const statusMessage = document.getElementById('status-message');
@@ -60,7 +73,7 @@
             } else {
                 statusMessage.textContent = "Get the latest version of our app by clicking the button below.";
                 downloadButton.href = 'https://download1526.mediafire.com/lkh24jteavgg5Bj6pe6PmEhmhpljJbMe3gJE0FADrhG6Cz9lyAV99nR07BM8YEsweejgcH-ZgjYv8a36VAllCpLQEp6TY7sCrmDoFWkJrwziCfyM2bh5nDFyGdB2GpYyqBDswDohzMvor_ZNNFKCmaeBFuPGohKBCzR7Sb3hhQ/9b52lhwym392jwc/Project+Heritage.apk';
-                
+                downloadButton.download = 'ProjectHeritage.apk';
             }
 
             closeAlertButton.addEventListener('click', () => {
